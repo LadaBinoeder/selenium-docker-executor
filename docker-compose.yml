@@ -37,3 +37,19 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+      
+  search-module:
+    image: ladabinoeder/selenium-docker
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - BROWSER = chrome
+      - MODULE = testng.xml
+    volumes:
+      - ./output:/Users/macbook/Desktop/output
+      
+      
