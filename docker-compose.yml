@@ -46,6 +46,6 @@ services:
       - BROWSER = chrome
       - MODULE = testng.xml
     volumes:
-      - ./output:/Users/macbook/Desktop/output
+      - ./output:/Users/macbook/IdeaProjects/DiplomaProject
       
       
