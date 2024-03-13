@@ -33,10 +33,6 @@ services:
   selenium-hub:
     image: seleniarm/hub
     container_name: selenium-hub
-    ports:
-      - "4442:4442"
-      - "4443:4443"
-      - "4444:4444"
       
   search-module:
     image: ladabinoeder/selenium-docker
