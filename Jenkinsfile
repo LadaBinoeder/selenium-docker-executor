@@ -18,9 +18,11 @@
         }
 
     }
+    steps {
+        archiveArtifacts artifacts: 'output/**'
+    }
     post{
-        always{
-            archiveArtifacts artifacts 'output/**'
+        always{       
             sh "docker-compose down"
         }
     }
