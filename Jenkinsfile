@@ -21,8 +21,6 @@ pipeline {
         always {       
             sh "docker-compose down"
         }
-    }
-    post {
         success {
             archiveArtifacts artifacts: 'output/**'
         }
